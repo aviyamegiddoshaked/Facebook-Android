@@ -1,8 +1,5 @@
 
-# Ex2-android
 ## This project is the front end of the Android application of facebook.
-
-
 
 
 ## Run:
