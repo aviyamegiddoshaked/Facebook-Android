@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity"
+    android:background="?attr/colorPrimaryVariant"
+    android:layoutDirection="ltr"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end"
+    android:id="@+id/drawer_layout">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userDetails_ll"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/facebookimg"
+            android:id="@+id/facebookIMG"
+            android:layout_margin="15dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/userImage"
+        tools:src="@drawable/e"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            tools:text="Aviel"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="@color/facebookBlue"
+            android:id="@+id/username_TV"
+            />
+
+    </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/baseline_menu_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/userDetails_ll"
+        android:layout_marginTop="5dp"
+        android:background="#DAD8D8"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:background="@drawable/searchview_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userDetails_ll"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search post here..."
+            android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/searchView"
+                android:layout_above="@id/addPostBTN"
+                android:orientation="vertical">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewForComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/signOutBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:text="Back" />
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/baseline_add_circle_24"
+            android:layout_toEndOf="@id/signOutBTN"
+            android:layout_alignBottom="@id/signOutBTN"
+            android:layout_marginStart="45dp"
+            android:id="@+id/addPostBTN"
+            />
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toStartOf="@id/signOutBTN"
+            android:layout_alignBottom="@id/signOutBTN"
+            android:layout_marginEnd="45dp"
+            android:id="@+id/nightModeBTN"
+
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_mode_night_24"
+            android:layout_toStartOf="@id/nightModeBTN"
+            android:layout_alignBottom="@id/signOutBTN"/>
+
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

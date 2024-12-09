@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+<!--         help settings privacy about-->
+        <item
+            android:id="@+id/nav_users_list"
+            android:title="Users"
+            android:icon="@drawable/baseline_account_circle_24"/>
+        <item
+            android:id="@+id/nav_help"
+            android:title="Help"
+            android:icon="@drawable/baseline_help_24"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings"
+            android:icon="@drawable/baseline_settings_24"/>
+        <item
+            android:id="@+id/nav_privacy"
+            android:title="Privacy"
+            android:icon="@drawable/baseline_privacy_tip_24"/>
+        <item
+            android:id="@+id/nav_about"
+            android:title="About"
+            android:icon="@drawable/baseline_about_24"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/baseline_about_24"/>
+
+    </group>
+
+
+
+
+</menu>

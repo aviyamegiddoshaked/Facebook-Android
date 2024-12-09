@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="?attr/colorPrimaryVariant"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/facebookimg"
+        android:layout_margin="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="55dp"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="@color/facebookBlue"
+        android:id="@+id/title_TV"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_TV"
+        android:id="@+id/firstname_ll"
+        android:gravity="start"
+        android:paddingStart="90dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Name: "
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/facebookBlue"
+            android:id="@+id/userfirstnameTV"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter name"
+            android:fontFamily="sans-serif-thin"
+            android:inputType="textPersonName"
+            android:id="@+id/userfirstnameET"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_ll"
+        android:layout_below="@id/firstname_ll"
+        android:gravity="start"
+        android:paddingStart="90dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Email: "
+            android:id="@+id/email_tv"
+            android:textColor="@color/facebookBlue"
+            android:fontFamily="sans-serif-condensed-medium"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/email_tv"
+            android:layout_alignBottom="@id/email_tv"
+            android:hint="Enter email"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/useremailET"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_ll"
+        android:id="@+id/password_ll"
+        android:gravity="start"
+        android:paddingStart="90dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Password: "
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/facebookBlue"
+            android:id="@+id/password_tv"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter password"
+            android:fontFamily="sans-serif-thin"
+            android:inputType="textPassword"
+            android:id="@+id/passwordET"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirm_password_ll"
+        android:layout_below="@id/password_ll"
+        android:gravity="start"
+        android:paddingStart="90dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Confirm: "
+            android:textColor="@color/facebookBlue"
+            android:fontFamily="sans-serif-condensed-medium"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/email_tv"
+            android:layout_alignBottom="@id/email_tv"
+            android:hint="Enter password"
+            android:textSize="20dp"
+            android:inputType="textPassword"
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/confirm_passwordET"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageBTN_ll"
+        android:layout_below="@id/confirm_password_ll"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_add_photo_alternate_24"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            />
+
+    <Button
+        android:id="@+id/imageFromGalleryBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/facebookBlue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Gallery"
+        android:layout_gravity="center"
+        android:layout_marginEnd="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="40dp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_marginEnd="5dp"/>
+        <Button
+            android:id="@+id/imageFromCameraBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/facebookBlue"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Take Photo" />
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/errorTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:backgroundTint="@color/facebookBlue"
+        android:id="@+id/registerBTN"/>
+
+    <TextView
+        android:id="@+id/errorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageBTN_ll"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="* Password must contain letters and numbers\n* Password length must be 8 or more"
+        android:textColor="@color/errorRed"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:text="Go back to login page"
+        android:textColor="@color/black"
+        android:id="@+id/gobackTV"
+        />
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backgrounditem"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="20dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingStart="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:id="@+id/editOrComment_ll">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_comment_24"
+        android:id="@+id/addComment"
+        android:paddingEnd="10dp"
+        />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twotone_edit_24"
+            android:id="@+id/editPost"
+            android:paddingEnd="10dp"
+            />
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/imageview"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@id/editOrComment_ll"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_toEndOf="@id/imageview"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        tools:text="Name"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:layout_toEndOf="@id/imageview"
+        android:layout_below="@id/messageAndIcons_ll"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        tools:text="31/01/2024"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageAndIcons_ll"
+        android:layout_toEndOf="@id/imageview"
+        android:layout_below="@id/name">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:textColor="@color/black"
+        tools:text="Hey this is my message"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_delete_outline_24"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:paddingEnd="5dp"
+                android:id="@+id/delete"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_thumb_up_off_alt_24"
+                android:id="@+id/like"
+                android:paddingEnd="5dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_share_24"
+                android:id="@+id/share"
+                android:paddingEnd="5dp"
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/postimage"
+        android:layout_below="@id/date"
+        android:id="@+id/imageForPost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+
+</RelativeLayout>

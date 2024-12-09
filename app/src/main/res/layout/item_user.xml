@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_photo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            tools:src="@drawable/a"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
+                android:gravity="start"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="user"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test@email.com"
+                android:textSize="14sp"
+                android:textColor="#808080"
+                android:maxLines="1"
+                android:ellipsize="end"
+                 />
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/friend_button_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:src="@drawable/baseline_add_circle_24"
+            android:background="@android:color/transparent"
+            android:padding="8dp" />
+        <ImageButton
+            android:id="@+id/friend_button_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:src="@drawable/baseline_add_circle_24"
+            android:background="@android:color/transparent"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
